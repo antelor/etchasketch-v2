@@ -16,18 +16,20 @@
     <div class="game">
         <div class="sidemenu">
             <div class="colormenu"> 
-                <div>
+                <div class="colortitle">
                     Color menu 
                 </div>
-                <div class="colorpick red" onclick="colorMode('red')"></div>
-                <div class="colorpick green" onclick="colorMode('green')"></div>
-                <div class="colorpick blue" onclick="colorMode('blue')"></div>
+                <div class="coloroptions">
+                    <div class="colorpick red" onclick="colorMode('red')"></div>
+                    <div class="colorpick green" onclick="colorMode('green')"></div>
+                    <div class="colorpick blue" onclick="colorMode('blue')"></div>
+                </div>
             </div>
             <button onclick="eraserMode()">Eraser</button>
             <button onclick="clearGrid()">Clear</button>
     
             <input type="text" id="size">
-            <button onclick="changeGrid(document.getElementById('size').value)">Change</button>
+            <button onclick="changeGrid(document.getElementById('size').value)">Change grid</button>
         </div>
     
         <div class="grid">

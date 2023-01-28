@@ -16,7 +16,7 @@ function generateGrid(number) {
         for (let j = 0; j < number; j++){
             let square = document.createElement('div');
             square.setAttribute('class', 'square');
-            square.setAttribute('style', `height: ${500/number}px;width: ${500/number}px;`)
+            square.setAttribute('style', `height: ${400/number}px;width: ${400/number}px;`)
             grid.appendChild(square);
         }
     }

@@ -52,6 +52,8 @@ function eraserMode() {
     squares.forEach(square => {
         square.addEventListener('mouseover', () => {
             square.classList.remove('red');
+            square.classList.remove('green');
+            square.classList.remove('blue');
         });
     });
 }
@@ -60,6 +62,26 @@ function clearGrid() {
     let squares = document.querySelectorAll('.square');
     squares.forEach(square => {
         square.classList.remove('red');
+        square.classList.remove('green');
+        square.classList.remove('blue');
+    });
+}
+
+function colorMode(color) {
+    let squares = document.querySelectorAll('.square');
+    
+    //removing all listeners first
+    squares.forEach(square => {
+        square.replaceWith(square.cloneNode(true));
+    });
+
+    squares = document.querySelectorAll('.square');
+
+    //then adding erase listener
+    squares.forEach(square => {
+        square.addEventListener('mouseover', () => {
+            square.classList.add(color);
+        });
     });
 }
 

@@ -40,3 +40,14 @@ html {
     background-color: green;
 }
 
+/*color menu*/
+.colormenu{
+    display: flex;
+}
+
+/*color picker divs*/
+
+.colorpick{
+    height: 50px;
+    width: 50px;
+}

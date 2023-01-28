@@ -21,7 +21,7 @@ function generateGrid(number) {
         }
     }
 
-    //assigning hover listeners
+    //assigning hover listeners for default color mode
     let squares = document.querySelectorAll('.square');
     squares.forEach(square => {
         square.addEventListener('mouseover', () => {
@@ -30,11 +30,30 @@ function generateGrid(number) {
     });
 }
 
+
 function changeGrid(number) {
     //first we reset the grid
     grid.textContent = "";
     //then re-gen
     generateGrid(number);
+}
+
+function eraserMode() {
+    let squares = document.querySelectorAll('.square');
+    
+    //removing all listeners first
+    squares.forEach(square => {
+        square.replaceWith(square.cloneNode(true));
+    });
+
+    squares = document.querySelectorAll('.square');
+
+    //then adding erase listener
+    squares.forEach(square => {
+        square.addEventListener('mouseover', () => {
+            square.classList.remove('red');
+        });
+    });
 }
 
 init();

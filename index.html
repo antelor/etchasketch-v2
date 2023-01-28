@@ -9,9 +9,30 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
-    <input type="text" id="size">
-    <button onclick="changeGrid(document.getElementById('size').value)">Change</button>
-    <div class="grid">
+    <div class="name">
+        Etch-a-sketch
+    </div>
+    
+    <div class="game">
+        <div class="sidemenu">
+            <div> 
+                <div>
+                    Color menu 
+                </div>
+                <div class="red"></div>
+                <div class="blue"></div>
+                <div class="green"></div>
+            </div>
+            <button>Rainbow mode</button>
+            <button onclick="eraserMode()">Eraser</button>
+            <button>Clear</button>
+    
+            <input type="text" id="size">
+            <button onclick="changeGrid(document.getElementById('size').value)">Change</button>
+        </div>
+    
+        <div class="grid">
+    </div>
 
     </div>
 </body>

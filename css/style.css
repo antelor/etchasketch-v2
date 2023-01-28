@@ -7,9 +7,13 @@ html {
     box-sizing: border-box;
     --size: 500px;
 }
-  
+
 *, *:before, *:after {
     box-sizing: inherit;
+}
+
+.game{
+    display: flex;
 }
 
 .grid{
@@ -22,9 +26,17 @@ html {
 .square{
     height: calc(var(--size)/16);
     width: calc(var(--size)/16);
-    border: 1px solid red;
 }
 
 .red{
     background-color: red;
 }
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+

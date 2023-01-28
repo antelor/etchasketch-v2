@@ -56,4 +56,11 @@ function eraserMode() {
     });
 }
 
+function clearGrid() {
+    let squares = document.querySelectorAll('.square');
+    squares.forEach(square => {
+        square.classList.remove('red');
+    });
+}
+
 init();
